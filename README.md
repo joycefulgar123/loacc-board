@@ -76,7 +76,7 @@ Colors come straight from the 606 logo: sky blue `#7ebadf` (the Chicago-flag blu
 - The GHL token is stored **only** as the GitHub Actions secret `GHL_TOKEN`. It never appears in the code, the data file, or the website.
 - The token only needs **read-only** scopes. The dashboard cannot change anything in GHL.
 - `board.json` contains no names, phone numbers, emails, or addresses. Each lead is stored as a one-way scrambled ID plus the dates it reached each step.
-- The repo must be **private**, and the Vercel site must use Deployment Protection set to **All Deployments** (see SETUP.md, Step 7).
+- The **repo stays private**. The **website is public**: anyone with the link can see the funnel numbers (counts, dates and sources, no personal details). It is hidden from search engines. To require a login later, see SETUP.md, Step 7.
 
 ## Files
 

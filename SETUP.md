@@ -9,11 +9,11 @@ GoHighLevel ──(every 3 hours)──► GitHub Action ──► data file in 
                                                           │
                                          Vercel rebuilds the site automatically
                                                           ▼
-                                           LOACC Board (login required)
+                                       LOACC Board (public link)
 ```
 
 - **GitHub** stores the code and runs a small robot (a "GitHub Action") every 3 hours. The robot reads your GHL data and saves a data file.
-- **Vercel** hosts the dashboard and only lets in people you approve.
+- **Vercel** hosts the dashboard at a public link. Anyone with the link can view it; the GitHub repo itself stays private.
 - **The GHL token** is the robot's key to your GHL account. It is stored only as a GitHub secret. It is never in the code, never on the website, and never visible to viewers.
 
 **What you need**
@@ -87,25 +87,15 @@ From now on, the robot runs every 3 hours on its own.
 3. Leave **Framework Preset** as **Other**. Don't change the build settings, because `vercel.json` already handles them.
 4. Click **Deploy**. In under a minute you'll get a link like `loacc-board.vercel.app`.
 
-## Step 7 — Lock it down (do this before sharing the link)
+## Step 7 — Check it's public (and decide if you want it that way)
 
-Vercel's free **Hobby** plan is for personal, non-commercial use only. This is business data, so put the project on a **Pro** team. Then pick one of these:
-
-| Option | How people get in | Cost (Vercel's pricing, Oct 2026) |
-|---|---|---|
-| **A. Vercel Authentication** (recommended) | Each person logs in with their own Vercel account. You invite them as free **Viewer** members. | Pro plan only. Your own seat is $20/month, and viewer seats are free. |
-| **B. Password Protection** | One shared password | Pro plan plus $20/month for this project |
-
-Option A is safer because you can remove one person without changing everyone's password.
-
-To set it up:
+The dashboard is set up as a **public website**: anyone with the link can see it, with no login. The page is hidden from Google and other search engines, but the link itself works for anyone you send it to, or anyone they forward it to.
 
 1. In the project, go to **Settings → Deployment Protection**.
-2. Turn on **Vercel Authentication** (or **Password Protection** for option B).
-3. Under scope, choose **All Deployments**. This matters: the default ("Standard") leaves your main link **public**.
-4. Click **Save**.
-5. Open the link in a private/incognito browser window. You should get a login or password screen, not the dashboard.
-6. For option A, invite people under **Team Settings → Members** with the **Viewer** role.
+2. Make sure it says **Standard Protection** (the default) or is turned off. Standard Protection only locks preview links; your main `….vercel.app` link stays public.
+3. Open your main link in a private/incognito window. You should see the dashboard straight away, with no login screen.
+
+**If you ever want to lock it later,** change the scope in that same screen to **All Deployments** and pick **Vercel Authentication** (each person logs in) or **Password Protection** (one shared password, a paid add-on). Note that Vercel's free **Hobby** plan is meant for personal, non-commercial use; for business use, Vercel expects a **Pro** plan.
 
 ## You're done
 
