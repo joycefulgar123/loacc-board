@@ -1,0 +1,47 @@
+{
+  "_readme": "Business rules for the LOACC Board. Edit names here (not in code) when your GHL setup changes. Stage names must match GHL exactly. See README.md for what each setting does.",
+
+  "locationId": "VOUsKOXpQktJ6Xr6DO66",
+  "timezone": "America/Chicago",
+  "dataStart": "2026-08-24",
+
+  "acquisitionsPipeline": "Acquisitions Manager Pipeline",
+  "textingPipeline": "Texting Manager Pipeline",
+
+  "meta": {
+    "tag": "rei survey lead"
+  },
+
+  "texting": {
+    "tags": ["seller-drip-list", "src-mass-text"],
+    "tagContains": ["campaign"]
+  },
+
+  "opportunityStages": [
+    "Working",
+    "Appointment Set",
+    "Appointment Complete",
+    "Offer Sent",
+    "Closed Won",
+    "Warm Going Cold",
+    "Nurture",
+    "Long Term Follow Up"
+  ],
+
+  "appointment": {
+    "stages": ["Appointment Set", "Appointment Complete", "Offer Sent", "Closed Won"],
+    "calendars": ["Andrew Graf's Personal Calendar"],
+    "ignoreStatuses": ["cancelled", "invalid"]
+  },
+
+  "contracts": {
+    "enabled": false,
+    "tags": ["contract-signed"],
+    "stages": []
+  },
+
+  "close": {
+    "stages": ["Closed Won"],
+    "countWonStatus": true
+  }
+}

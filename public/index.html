@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>LOACC Board</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M7 9h18l-6 7v7l-6 2v-9z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <h1>LOACC Board</h1>
+      <p class="sub">Leads · Opportunities · Appointments · Contracts · Closed</p>
+    </div>
+    <p class="updated" id="updated">Loading…</p>
+  </header>
+
+  <nav class="controls" aria-label="Filters">
+    <div class="seg" role="radiogroup" aria-label="Lead source" id="source">
+      <button role="radio" data-v="all" aria-checked="true">Combined</button>
+      <button role="radio" data-v="meta" aria-checked="false">Meta leads</button>
+      <button role="radio" data-v="texting" aria-checked="false">Texting leads</button>
+    </div>
+    <div class="seg" role="radiogroup" aria-label="Timeframe" id="unit">
+      <button role="radio" data-v="week" aria-checked="false">Weekly</button>
+      <button role="radio" data-v="month" aria-checked="true">Monthly</button>
+      <button role="radio" data-v="quarter" aria-checked="false">Quarterly</button>
+      <button role="radio" data-v="year" aria-checked="false">Annually</button>
+    </div>
+    <div class="period">
+      <button class="icon" id="prev" aria-label="Earlier period">‹</button>
+      <span id="periodLabel" aria-live="polite"></span>
+      <button class="icon" id="next" aria-label="Later period">›</button>
+    </div>
+    <label class="compare">
+      <input type="checkbox" id="samePoint" checked>
+      Compare to the same point last period
+    </label>
+  </nav>
+
+  <main>
+    <p class="compare-note" id="compareNote"></p>
+
+    <section aria-labelledby="h-metrics">
+      <h2 id="h-metrics">Funnel metrics</h2>
+      <div class="cards" id="metricCards"></div>
+    </section>
+
+    <section aria-labelledby="h-rates">
+      <h2 id="h-rates">Conversion rates</h2>
+      <div class="cards rates" id="rateCards"></div>
+    </section>
+
+    <section class="grid2">
+      <div class="panel">
+        <h2>Where leads drop off</h2>
+        <p class="hint" id="dropNote"></p>
+        <div class="funnel" id="funnel"></div>
+      </div>
+      <div class="panel">
+        <h2>Conversion rates over time</h2>
+        <div class="chart-box"><canvas id="rateChart" aria-label="Conversion rates over time"></canvas></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-trend">
+      <h2 id="h-trend">Each metric over time</h2>
+      <div class="multiples" id="multiples"></div>
+      <details class="table-view">
+        <summary>Show as a table</summary>
+        <div class="table-wrap"><table id="trendTable"></table></div>
+      </details>
+    </section>
+
+    <section class="grid2">
+      <div class="panel">
+        <h2>Data clean-up</h2>
+        <ul class="quality" id="quality"></ul>
+      </div>
+      <div class="panel">
+        <h2>How the numbers are counted</h2>
+        <dl class="defs" id="defs"></dl>
+        <p class="hint">Each step is counted in the period it happened. A lead from last month that books an appointment this month counts as this month's appointment, so short periods can show a rate above 100%. Full rules are in the README.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

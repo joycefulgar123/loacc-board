@@ -1,0 +1,12 @@
+{
+  "name": "loacc-board",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "LOACC funnel dashboard for 606 Home Buyers (GoHighLevel data).",
+  "scripts": {
+    "fetch": "node scripts/fetch-ghl.mjs",
+    "test": "node tests/run-tests.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
