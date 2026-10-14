@@ -67,6 +67,10 @@ The dashboard flags these problems so your GHL data stays trustworthy:
 - **Open deals named "DISQUALIFIED"** that are still sitting in an active stage
 - **Cancelled bookings** that were excluded
 
+## Branding
+
+Colors come straight from the 606 logo: sky blue `#7ebadf` (the Chicago-flag blue), star red `#c52a2c`, and the cream background `#fcf8f6`. Buttons and links use a deeper shade of the same blue (`#1f5e84`) so white text stays readable. The heading font is Fredoka (Google Fonts), chosen to match the logo's rounded lettering. Chart colors start from the brand blue and were checked for color-blind readability in light and dark mode. Red and green stay reserved for up/down changes. All colors are defined at the top of `public/styles.css`.
+
 ## Privacy and security
 
 - The GHL token is stored **only** as the GitHub Actions secret `GHL_TOKEN`. It never appears in the code, the data file, or the website.
@@ -82,6 +86,7 @@ The dashboard flags these problems so your GHL data stays trustworthy:
 | `scripts/fetch-ghl.mjs` | Pulls data from the GHL API v2 (run by the GitHub Action) |
 | `scripts/build.mjs` | Turns the raw data into the anonymous records described above |
 | `public/index.html`, `app.js`, `styles.css` | The dashboard itself: plain HTML/JS with Chart.js from cdnjs |
+| `public/brand/` | 606 Home Buyers logo (background removed), favicon and app icon |
 | `public/data/board.json` | The data file the dashboard reads. Updated by the robot; don't edit it by hand. |
 | `.github/workflows/refresh-data.yml` | Runs the robot every 3 hours and on demand |
 | `vercel.json` | Hosting settings: no build step, no caching of the data, hidden from search engines |

@@ -1,36 +1,40 @@
+/* 606 Home Buyers brand: Chicago-flag sky blue + star red, from the logo. */
 :root {
   color-scheme: light;
-  --bg: #f4f3f0;
-  --surface: #fcfcfb;
-  --border: #e3e1dc;
-  --text: #0b0b0b;
-  --text-2: #52514e;
-  --text-3: #75736e;
-  --grid: #e9e7e2;
-  --accent: #2a78d6;
+  --brand-blue: #7ebadf;   /* logo blue */
+  --brand-red: #c52a2c;    /* logo star */
+  --brand-deep: #1f5e84;   /* deeper shade of the logo blue, for buttons and links */
+  --bg: #fcf8f6;           /* logo background cream */
+  --surface: #ffffff;
+  --border: #e8e1dc;
+  --text: #0e1d28;
+  --text-2: #4b5560;
+  --text-3: #6f7880;
+  --grid: #eee8e3;
+  --accent: var(--brand-deep);
   --accent-ink: #ffffff;
   --good: #0a7d0a;
-  --bad: #c03232;
-  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4;
-  --ramp-1: #184f95; --ramp-2: #256abf; --ramp-3: #3987e5; --ramp-4: #6da7ec; --ramp-5: #86b6ef;
+  --bad: #b8282a;
+  --s1: #297bae; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4;
+  --ramp-1: #174663; --ramp-2: #1f5e84; --ramp-3: #297bae; --ramp-4: #51a4d6; --ramp-5: #7ebadf;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #111110; --surface: #1a1a19; --border: #2e2e2b;
-    --text: #f0efec; --text-2: #c3c2b7; --text-3: #9a988f; --grid: #2a2a27;
-    --accent: #3987e5; --good: #4cc94c; --bad: #f07a7a;
-    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
-    --ramp-1: #86b6ef; --ramp-2: #5598e7; --ramp-3: #3987e5; --ramp-4: #256abf; --ramp-5: #184f95;
+    --bg: #101315; --surface: #1a1a19; --border: #2c3034;
+    --text: #f0efec; --text-2: #c3c6c9; --text-3: #959ba1; --grid: #2a2d2f;
+    --accent: var(--brand-blue); --accent-ink: #0e1d28; --good: #4cc94c; --bad: #f07a7a;
+    --s1: #3092cf; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
+    --ramp-1: #a8d1ec; --ramp-2: #7ebadf; --ramp-3: #51a4d6; --ramp-4: #297bae; --ramp-5: #1b5274;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #111110; --surface: #1a1a19; --border: #2e2e2b;
-  --text: #f0efec; --text-2: #c3c2b7; --text-3: #9a988f; --grid: #2a2a27;
-  --accent: #3987e5; --good: #4cc94c; --bad: #f07a7a;
-  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
-  --ramp-1: #86b6ef; --ramp-2: #5598e7; --ramp-3: #3987e5; --ramp-4: #256abf; --ramp-5: #184f95;
+  --bg: #101315; --surface: #1a1a19; --border: #2c3034;
+  --text: #f0efec; --text-2: #c3c6c9; --text-3: #959ba1; --grid: #2a2d2f;
+  --accent: var(--brand-blue); --accent-ink: #0e1d28; --good: #4cc94c; --bad: #f07a7a;
+  --s1: #3092cf; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
+  --ramp-1: #a8d1ec; --ramp-2: #7ebadf; --ramp-3: #51a4d6; --ramp-4: #297bae; --ramp-5: #1b5274;
 }
 
 * { box-sizing: border-box; }
@@ -42,11 +46,17 @@ body {
   font-variant-numeric: tabular-nums;
 }
 .top, .controls, main { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.top { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; padding-top: 24px; flex-wrap: wrap; }
-h1 { margin: 0; font-size: 26px; letter-spacing: -0.02em; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 20px; padding-bottom: 14px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 16px; }
+.logo { height: 72px; width: auto; display: block; }
+h1, h2 { font-family: "Fredoka", system-ui, sans-serif; }
+h1 { margin: 0; font-size: 28px; font-weight: 600; letter-spacing: 0; color: var(--text); }
+h1 .accent { color: var(--accent); }
+/* Chicago flag stripes: blue, white, blue */
+.flag { height: 9px; background: linear-gradient(var(--brand-blue) 0 3px, transparent 3px 6px, var(--brand-blue) 6px 9px); }
 .sub { margin: 2px 0 0; color: var(--text-2); font-size: 13px; }
 .updated { margin: 0; color: var(--text-3); font-size: 13px; }
-h2 { font-size: 15px; margin: 0 0 12px; font-weight: 650; }
+h2 { font-size: 16px; margin: 0 0 12px; font-weight: 600; }
 section { margin: 0 0 28px; }
 
 .controls {
@@ -85,7 +95,7 @@ section { margin: 0 0 28px; }
 .delta.up { color: var(--good); } .delta.down { color: var(--bad); } .delta.flat { color: var(--text-3); }
 .card.muted .value { font-size: 18px; color: var(--text-3); font-weight: 600; padding: 8px 0 4px; }
 .rates .card .value { font-size: 26px; }
-.card.overall { border-color: var(--accent); }
+.card.overall { border-color: var(--accent); box-shadow: inset 4px 0 0 var(--accent); }
 
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; min-width: 0; }
@@ -129,6 +139,8 @@ th { color: var(--text-2); font-weight: 600; }
   .grid2 { grid-template-columns: 1fr; }
   .top, .controls, main { padding-left: 16px; padding-right: 16px; }
   .controls { position: static; }
+  .logo { height: 48px; }
+  h1 { font-size: 22px; }
   .seg button { padding: 6px 9px; font-size: 13px; }
   .frow { grid-template-columns: 92px 1fr; }
   .fstep { margin-left: 102px; }
