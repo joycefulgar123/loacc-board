@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-22T12:41:43.789Z",
+ "generatedAt": "2026-10-22T15:37:09.768Z",
  "timezone": "America/Chicago",
  "weekStartsOn": "Monday",
  "dataStart": "2026-08-24",
@@ -2747,6 +2747,13 @@
    "s": "meta",
    "d": {
     "lead": "2026-10-21"
+   }
+  },
+  {
+   "id": "c923d6bfa843ff87",
+   "s": "meta",
+   "d": {
+    "lead": "2026-10-22"
    }
   }
  ],
