@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-27T18:43:26.515Z",
+ "generatedAt": "2026-10-27T21:36:15.844Z",
  "timezone": "America/Chicago",
  "weekStartsOn": "Monday",
  "dataStart": "2026-08-24",
@@ -2753,7 +2753,9 @@
    "id": "3886f5ef3b68a43d",
    "s": "meta",
    "d": {
-    "lead": "2026-10-22"
+    "lead": "2026-10-22",
+    "opp": "2026-10-27",
+    "appt": "2026-10-27"
    }
   },
   {
@@ -2818,7 +2820,21 @@
    }
   },
   {
+   "id": "0ae60c2f1d5a190b",
+   "s": "texting",
+   "d": {
+    "lead": "2026-10-27"
+   }
+  },
+  {
    "id": "16a5532499aeb5d2",
+   "s": "texting",
+   "d": {
+    "lead": "2026-10-27"
+   }
+  },
+  {
+   "id": "b11e2a6c5f0b7b7c",
    "s": "texting",
    "d": {
     "lead": "2026-10-27"
@@ -2839,6 +2855,6 @@
   "disqualifiedStillOpen": 4,
   "cancelledBookingsExcluded": 1,
   "apptOnlyOnCalendar": 15,
-  "apptOnlyInStage": 19
+  "apptOnlyInStage": 20
  }
 }
