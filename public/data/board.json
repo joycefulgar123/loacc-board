@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-28T03:44:14.097Z",
+ "generatedAt": "2026-10-28T06:50:29.741Z",
  "timezone": "America/Chicago",
  "weekStartsOn": "Monday",
  "dataStart": "2026-08-24",
@@ -2829,6 +2829,13 @@
   {
    "id": "16a5532499aeb5d2",
    "s": "texting",
+   "d": {
+    "lead": "2026-10-27"
+   }
+  },
+  {
+   "id": "605d802a1077c285",
+   "s": "meta",
    "d": {
     "lead": "2026-10-27"
    }
