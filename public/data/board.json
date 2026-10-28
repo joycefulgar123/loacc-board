@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-28T15:52:13.554Z",
+ "generatedAt": "2026-10-28T18:46:45.173Z",
  "timezone": "America/Chicago",
  "weekStartsOn": "Monday",
  "dataStart": "2026-08-24",
@@ -2860,6 +2860,15 @@
    "d": {
     "lead": "2026-10-27"
    }
+  },
+  {
+   "id": "ce26f55af9e06a20",
+   "s": "texting",
+   "d": {
+    "lead": "2026-10-28",
+    "opp": "2026-10-28",
+    "appt": "2026-10-28"
+   }
   }
  ],
  "quality": {
@@ -2868,7 +2877,7 @@
   "otherSourceLeads": 169,
   "disqualifiedStillOpen": 4,
   "cancelledBookingsExcluded": 1,
-  "apptOnlyOnCalendar": 15,
+  "apptOnlyOnCalendar": 16,
   "apptOnlyInStage": 20
  }
 }
