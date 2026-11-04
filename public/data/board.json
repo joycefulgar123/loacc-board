@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-11-04T21:15:56.842Z",
+ "generatedAt": "2026-11-04T21:56:34.542Z",
  "timezone": "America/Chicago",
  "weekStartsOn": "Monday",
  "dataStart": "2026-08-24",
  "historyTrackedSince": "2026-10-14",
- "contractsTracked": false,
+ "contractsTracked": true,
  "definitions": {
   "lead": "Meta: contact tagged \"rei survey lead\" (date added). Texting/other: deal created in \"Acquisitions Manager Pipeline\".",
   "opp": "Deal reached one of: Working, Appointment Set, Appointment Complete, Offer Sent, Closed Won, Warm Going Cold, Nurture, Long Term Follow Up.",
   "appt": "Booked on Andrew Graf's Personal Calendar (booking date, cancelled excluded) or deal reached: Appointment Set, Appointment Complete, Offer Sent, Closed Won.",
-  "contract": "Not tracked yet.",
+  "contract": "Tagged contract-signed or reached Contract Signed, Contract Fallen Through.",
   "close": "Deal reached Closed Won or was marked Won."
  },
  "records": [
