@@ -29,7 +29,7 @@ All the rules below come from `config.json`, so you can change them without touc
 | **Leads** | See above | See above |
 | **Opportunities** | The deal reaches **Working** or a later stage: Appointment Set, Appointment Complete, Offer Sent, Closed Won, Warm Going Cold, Nurture, or Long Term Follow Up | The day it moved into that stage |
 | **Appointments** | Either a booking on **Andrew Graf's Personal Calendar** (cancelled bookings excluded) **or** the deal reaching **Appointment Set** or later (Appointment Complete, Offer Sent, Closed Won) | Whichever happened first. For bookings, that's the day the booking was *made*, not the day of the call. |
-| **Contracts** | **Not tracked yet.** Turn this on in `config.json` once contracts are tagged `contract-signed` or have their own stage. | The first day the robot sees the tag or stage |
+| **Contracts** | The deal reaches **Contract Signed** (or later fell through: **Contract Fallen Through**), or is tagged `contract-signed`. Closed deals count as contracts too. | The day it moved into that stage |
 | **Closed** | The deal reaches **Closed Won** or is marked **Won** | The day it moved there |
 
 These rules always apply:

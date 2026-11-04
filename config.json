@@ -35,9 +35,9 @@
   },
 
   "contracts": {
-    "enabled": false,
+    "enabled": true,
     "tags": ["contract-signed"],
-    "stages": []
+    "stages": ["Contract Signed", "Contract Fallen Through"]
   },
 
   "close": {
