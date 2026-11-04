@@ -16,7 +16,7 @@ const LOC = 'VOUsKOXpQktJ6Xr6DO66';
 const ACQ = {
   id: 'acq', name: 'Acquisitions Manager Pipeline',
   stages: ['New Lead', 'Never Answered New Leads', 'Working', 'Appointment Set', 'Appointment Complete', 'Offer Sent',
-    'Closed Won', 'Warm Going Cold', 'Nurture', 'Long Term Follow Up', 'Cold Leads', 'Closed Lost']
+    'Closed Won', 'Warm Going Cold', 'Nurture', 'Long Term Follow Up', 'Cold Leads', 'Closed Lost', 'Contract Sent', 'Contract Signed', 'Contract Fallen Through']
     .map((name, i) => ({ id: `st${i}`, name })),
 };
 const sid = (name) => ACQ.stages.find((s) => s.name === name).id;
@@ -144,7 +144,9 @@ assert.deepEqual(
 );
 assert.deepEqual(['lead', 'opp', 'appt'].map((s) => count(b1, s, ...sept, 'meta')), [2, 2, 2], 'September Meta');
 assert.deepEqual(['lead', 'appt', 'close'].map((s) => count(b1, s, ...oct, 'texting')), [1, 1, 1], 'October texting');
-assert.equal(b1.records.every((r) => !('contract' in r.d)), true, 'contracts untracked');
+assert.equal(b1.contractsTracked, true, 'contracts tracked');
+assert.equal(b1.records.every((r) => !r.d.close || (r.d.contract && r.d.contract <= r.d.close)), true, 'a closed deal also counts as a contract');
+assert.equal(b1.records.filter((r) => r.d.contract && !r.d.close).length, 0, 'no contract stages in the fixture, so only closed deals have contracts');
 
 // Timezone: a stage change at 03:00 UTC Oct 2 is Oct 1 in Chicago (A's calendar booking Sept 29 is earlier, so appt = Sept 29).
 assert.deepEqual(b1.quality.metaTagVariants, ['REI-Survey Lead', 'rei survey leads'], 'flags tag look-alikes');
