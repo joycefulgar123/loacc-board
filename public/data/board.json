@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-05T06:30:29.137Z",
+ "generatedAt": "2026-11-05T17:19:42.650Z",
  "timezone": "America/Chicago",
  "weekStartsOn": "Monday",
  "dataStart": "2026-08-24",
@@ -2963,6 +2963,36 @@
     "lead": "2026-11-04",
     "opp": "2026-11-04",
     "appt": "2026-11-04"
+   }
+  },
+  {
+   "id": "7eae4f0ba7d73273",
+   "s": "texting",
+   "d": {
+    "lead": "2026-11-05"
+   }
+  },
+  {
+   "id": "bb78454516bfb5fc",
+   "s": "texting",
+   "d": {
+    "lead": "2026-11-05",
+    "opp": "2026-11-05",
+    "appt": "2026-11-05"
+   }
+  },
+  {
+   "id": "bf2164174d5e0647",
+   "s": "texting",
+   "d": {
+    "lead": "2026-11-05"
+   }
+  },
+  {
+   "id": "e8ea95d1c2191b8a",
+   "s": "texting",
+   "d": {
+    "lead": "2026-11-05"
    }
   }
  ],
