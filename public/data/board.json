@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-08T21:57:24.983Z",
+ "generatedAt": "2026-11-09T06:04:48.855Z",
  "timezone": "America/Chicago",
  "weekStartsOn": "Monday",
  "dataStart": "2026-08-24",
@@ -3024,6 +3024,13 @@
    "d": {
     "lead": "2026-11-08"
    }
+  },
+  {
+   "id": "9d04d93a79ee581e",
+   "s": "meta",
+   "d": {
+    "lead": "2026-11-08"
+   }
   }
  ],
  "quality": {
@@ -3033,6 +3040,6 @@
   "disqualifiedStillOpen": 4,
   "cancelledBookingsExcluded": 1,
   "apptOnlyOnCalendar": 18,
-  "apptOnlyInStage": 20
+  "apptOnlyInStage": 19
  }
 }
