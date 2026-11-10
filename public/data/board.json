@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-09T16:03:01.036Z",
+ "generatedAt": "2026-11-10T01:26:53.711Z",
  "timezone": "America/Chicago",
  "weekStartsOn": "Monday",
  "dataStart": "2026-08-24",
@@ -3040,6 +3040,6 @@
   "disqualifiedStillOpen": 4,
   "cancelledBookingsExcluded": 1,
   "apptOnlyOnCalendar": 19,
-  "apptOnlyInStage": 13
+  "apptOnlyInStage": 12
  }
 }
