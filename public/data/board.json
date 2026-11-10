@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-10T11:00:18.224Z",
+ "generatedAt": "2026-11-10T19:38:48.322Z",
  "timezone": "America/Chicago",
  "weekStartsOn": "Monday",
  "dataStart": "2026-08-24",
@@ -2844,7 +2844,9 @@
    "id": "605d802a1077c285",
    "s": "meta",
    "d": {
-    "lead": "2026-10-27"
+    "lead": "2026-10-27",
+    "opp": "2026-11-10",
+    "appt": "2026-11-10"
    }
   },
   {
@@ -3031,15 +3033,33 @@
    "d": {
     "lead": "2026-11-08"
    }
+  },
+  {
+   "id": "4248ba4ac7d79718",
+   "s": "texting",
+   "d": {
+    "lead": "2026-11-09",
+    "opp": "2026-11-10",
+    "appt": "2026-11-10"
+   }
+  },
+  {
+   "id": "253f800a65bbd508",
+   "s": "meta",
+   "d": {
+    "lead": "2026-11-10",
+    "opp": "2026-11-10",
+    "appt": "2026-11-10"
+   }
   }
  ],
  "quality": {
   "metaTag": "rei survey lead",
   "metaTagVariants": [],
   "otherSourceLeads": 169,
-  "disqualifiedStillOpen": 4,
+  "disqualifiedStillOpen": 3,
   "cancelledBookingsExcluded": 1,
-  "apptOnlyOnCalendar": 19,
+  "apptOnlyOnCalendar": 20,
   "apptOnlyInStage": 12
  }
 }
